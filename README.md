@@ -29,16 +29,18 @@ Configuración estética para **Hyprland** con tema **Catppuccin Mocha**.
 
 ```
 dotfiles/
+├── cava/
+│   └── config              # cava visualizer con gradiente Catppuccin
 ├── fastfetch/
-│   ├── config.jsonc      # Configuración de fastfetch
+│   ├── config.jsonc        # Configuración de fastfetch
 │   └── ascii/
-│       └── logo.txt       # ASCII art de Shiroko
+│       └── logo.txt        # ASCII art de Shiroko
 ├── kitty/
-│   └── kitty.conf         # Kitty terminal con Catppuccin Mocha
+│   └── kitty.conf          # Kitty terminal con Catppuccin Mocha
 ├── starship/
-│   └── starship.toml      # Starship prompt azul
+│   └── starship.toml       # Starship prompt azul
 └── fish/
-    └── config.fish        # Fish shell con starship init
+    └── config.fish         # Fish shell con starship init
 ```
 
 ## 🚀 Instalación
@@ -47,13 +49,20 @@ dotfiles/
 # Clonar
 git clone https://github.com/jeampiervalle-dot/dotfiles.git ~/dotfiles
 
+# cava
+sudo pacman -S cava
+mkdir -p ~/.config/cava
+cp ~/dotfiles/cava/config ~/.config/cava/config
+
 # Fastfetch
+sudo pacman -S fastfetch
 cp -r ~/dotfiles/fastfetch ~/.config/
 
 # Kitty
 cp -r ~/dotfiles/kitty ~/.config/
 
 # Starship
+sudo pacman -S starship
 cp ~/dotfiles/starship/starship.toml ~/.config/
 
 # Fish
@@ -62,6 +71,7 @@ cp ~/dotfiles/fish/config.fish ~/.config/fish/
 
 ### Requisitos
 
+- `cava` — `sudo pacman -S cava`
 - `fastfetch` — `sudo pacman -S fastfetch`
 - `starship` — `sudo pacman -S starship`
 - Nerd Font (ej. Hack Nerd Font)
@@ -72,6 +82,7 @@ cp ~/dotfiles/fish/config.fish ~/.config/fish/
 
 | Componente | Descripción |
 |------------|-------------|
+| **cava** | Visualizador de audio con gradiente Catppuccin Mocha |
 | **Fastfetch** | ASCII art de Shiroko (Blue Archive) con colores pastel |
 | **Kitty** | Tema Catppuccin Mocha con transparencia (60%) |
 | **Starship** | Prompt estilo Powerline en azul, lavanda y púrpura |
