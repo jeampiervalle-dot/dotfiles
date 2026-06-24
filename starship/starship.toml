@@ -1,0 +1,120 @@
+"$schema" = 'https://starship.rs/config-schema.json'
+
+format = """
+[](bg:#89b4fa)\
+$os\
+$username\
+[](bg:#b4befe fg:#89b4fa)\
+$directory\
+[](fg:#b4befe bg:#cba6f7)\
+$git_branch\
+$git_status\
+[](fg:#cba6f7 bg:#a6e3a1)\
+$c\
+$rust\
+$golang\
+$nodejs\
+$bun\
+$python\
+[](fg:#a6e3a1 bg:#f9e2af)\
+$time\
+[ ](fg:#f9e2af)\
+$cmd_duration\
+$line_break\
+$character"""
+
+[os]
+disabled = false
+style = "bg:#89b4fa fg:#1e1e2e"
+
+[os.symbols]
+Linux = "󰌽"
+Arch = "󰣇"
+
+[username]
+show_always = true
+style_user = "bg:#89b4fa fg:#1e1e2e"
+style_root = "bg:#89b4fa fg:#1e1e2e"
+format = '[ $user ]($style)'
+
+[hostname]
+ssh_only = true
+style = "bg:#89b4fa fg:#1e1e2e"
+format = "[@$hostname]($style)"
+
+[directory]
+style = "bg:#b4befe fg:#1e1e2e"
+format = "[ $path ]($style)"
+truncation_length = 3
+truncation_symbol = "…/"
+
+[directory.substitutions]
+"Documents" = "󰈙 "
+"Downloads" = " "
+"Music" = "󰝚 "
+"Pictures" = " "
+"Developer" = "󰲋 "
+"Desktop" = " "
+
+[git_branch]
+symbol = ""
+style = "bg:#cba6f7"
+format = '[[ $symbol $branch ](fg:#1e1e2e bg:#cba6f7)]($style)'
+
+[git_status]
+style = "bg:#cba6f7"
+format = '[[($all_status$ahead_behind )](fg:#1e1e2e bg:#cba6f7)]($style)'
+
+[nodejs]
+symbol = ""
+style = "bg:#a6e3a1"
+format = '[[ $symbol( $version) ](fg:#1e1e2e bg:#a6e3a1)]($style)'
+
+[bun]
+symbol = ""
+style = "bg:#a6e3a1"
+format = '[[ $symbol( $version) ](fg:#1e1e2e bg:#a6e3a1)]($style)'
+
+[c]
+symbol = " "
+style = "bg:#a6e3a1"
+format = '[[ $symbol( $version) ](fg:#1e1e2e bg:#a6e3a1)]($style)'
+
+[rust]
+symbol = ""
+style = "bg:#a6e3a1"
+format = '[[ $symbol( $version) ](fg:#1e1e2e bg:#a6e3a1)]($style)'
+
+[golang]
+symbol = ""
+style = "bg:#a6e3a1"
+format = '[[ $symbol( $version) ](fg:#1e1e2e bg:#a6e3a1)]($style)'
+
+[python]
+symbol = ""
+style = "bg:#a6e3a1"
+format = '[[ $symbol( $version)(\(#$virtualenv\)) ](fg:#1e1e2e bg:#a6e3a1)]($style)'
+
+[time]
+disabled = false
+time_format = "%R"
+style = "bg:#f9e2af"
+format = '[[  $time ](fg:#1e1e2e bg:#f9e2af)]($style)'
+
+[line_break]
+disabled = true
+
+[character]
+disabled = false
+success_symbol = '[❯](bold fg:#89b4fa)'
+error_symbol = '[❯](bold fg:#f38ba8)'
+vimcmd_symbol = '[❮](bold fg:#89b4fa)'
+vimcmd_replace_one_symbol = '[❮](bold fg:#cba6f7)'
+vimcmd_replace_symbol = '[❮](bold fg:#cba6f7)'
+vimcmd_visual_symbol = '[❮](bold fg:#f9e2af)'
+
+[cmd_duration]
+show_milliseconds = true
+format = " in $duration "
+style = "bg:#f9e2af"
+disabled = false
