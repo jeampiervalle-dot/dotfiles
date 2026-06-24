@@ -4,7 +4,6 @@ Configuración estética para **Hyprland** con tema **Catppuccin Mocha**.
 
 ![Fastfetch Preview](assets/fastfetch.png)
 ![Kitty Preview](assets/kitty.png)
-![Starship Preview](assets/starship.png)
 
 ## 📸 Preview
 
@@ -87,15 +86,7 @@ cp ~/dotfiles/fish/config.fish ~/.config/fish/
 | **Kitty** | Tema Catppuccin Mocha con transparencia (60%) |
 | **Starship** | Prompt estilo Powerline en azul, lavanda y púrpura |
 
-## 📸 Capturas reales
 
-Toma una captura en tu sistema con:
-
-```bash
-grim ~/dotfiles/assets/fastfetch.png   # Hyprland
-```
-
-O usa cualquier otro screenshot tool y agrega las imágenes en `assets/`.
 
 ## 👤 Créditos
 
